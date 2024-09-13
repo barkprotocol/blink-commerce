@@ -2,10 +2,12 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['ucarecdn.com', 'unsplash.com'],
+  },
   webpack: (config, { isServer }) => {
-    // Add MiniCssExtractPlugin only for client-side builds
     if (!isServer) {
-      // Push the MiniCssExtractPlugin instance to the Webpack plugins array
+      // Add MiniCssExtractPlugin only for client-side builds
       config.plugins.push(
         new MiniCssExtractPlugin({
           filename: 'static/css/[name].css',
@@ -13,18 +15,16 @@ const nextConfig = {
         })
       );
 
-      // Find and replace the default CSS loader configuration
-      config.module.rules.forEach((rule) => {
-        if (rule.oneOf) {
-          rule.oneOf.forEach((oneOfRule) => {
-            if (oneOfRule.test && oneOfRule.test.toString().includes('css')) {
-              oneOfRule.use = [
-                MiniCssExtractPlugin.loader,
-                'css-loader',
-                'postcss-loader',
-              ];
-            }
-          });
+      // Replace default CSS loader configuration
+      const rules = config.module.rules.find((rule) => Array.isArray(rule.oneOf))?.oneOf || [];
+
+      rules.forEach((rule) => {
+        if (rule.test && rule.test.toString().includes('css')) {
+          rule.use = [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'postcss-loader',
+          ];
         }
       });
     }

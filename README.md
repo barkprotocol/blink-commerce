@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BARK E-commerce
 
-## Getting Started
+Welcome to BARK E-commerce, your one-stop shop for all things BARK. This project features a modern e-commerce platform built with Next.js, TypeScript, and Tailwind CSS, and leverages the Solana blockchain for a seamless shopping experience.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Hero Section**: Eye-catching introduction with a call to action.
+- **Features Section**: Highlights key benefits like product selection, delivery, and secure shopping.
+- **Featured Products**: Displays top products with detailed information and add-to-cart functionality.
+- **Join Community Section**: Newsletter subscription form for exclusive offers and updates.
+- **CTA Section**: Encourages users to explore all products.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+To get started with this project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the Repository**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/barkprotocol/bark-commerce.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Navigate to the Project Directory**
 
-## Deploy on Vercel
+   ```bash
+   cd bark-commerce
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Install Dependencies**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+4. **Set Up Environment Variables**
+
+   Create a `.env.local` file in the root directory and add the following variables. Use the sample values as placeholders, and replace them with your actual values:
+
+   ```plaintext
+   NEXT_PUBLIC_SUPABASE_URL=
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=
+   NEXT_PUBLIC_SOLANA_NETWORK=devnet
+   NEXT_PUBLIC_SOLANA_RPC_URL=https://api.devnet.solana.com
+   NEXT_PUBLIC_MINT_API_URL=
+
+   BARK_COMMERCE_API_URL=https://api.example.com
+   BARK_COMMERCE_API_KEY=your-api-key-here
+
+   SOLANA_MAINNET_RPC_URL=insert_url_here
+   SOLANA_DEVNET_RPC_URL=insert_url_here
+
+   HELIUS_MAINNET_RPC_URL=https://mainnet.helius-rpc.com/?api-key=
+   HELIUS_DEVNET_RPC_URL=https://devnet.helius-rpc.com/?api-key=
+
+   PROXY_WALLET_SK=insert_key_here
+   SERVER_WALLET_SK=insert_key_here
+
+   SHYFT_API_KEY=https://rpc.shyft.to?api_key=c1AmdE28Ks7cwKzp
+
+   GMAIL_CLIENT_ID=insert_id_here
+   GMAIL_CLIENT_SECRET=insert_secret_here
+   GMAIL_REDIRECT_URI=https://developers.google.com/oauthplayground
+   GMAIL_REFRESH_TOKEN=insert_refresh_here
+   EMAIL_USER=insert_email_here
+   EMAIL_FROM=insert_email_here
+   ```
+
+## Usage
+
+1. **Start the Development Server**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+2. **Open your browser and navigate to `http://localhost:3000`** to see the application in action.
+
+3. **For production deployment**, ensure to set up environment variables and build the project:
+
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+   Deploy the project to Vercel or your preferred hosting provider.
+
+## Configuration
+
+- **Styling**: Uses Tailwind CSS for styling. Customize the configuration in `tailwind.config.js`.
+- **Fonts**: Google Fonts Oswald for titles, Poppins Light for body text, and Syne fonts.
+- **Wallet Integration**: Includes Phantom, Solflare, and Backpack wallets using `@solana/wallet-adapter-react`.
+
+## Contributing
+
+If you would like to contribute to this project, please follow these guidelines:
+
+1. **Fork the Repository** and create a new branch.
+2. **Make your changes** and ensure they are well-tested.
+3. **Submit a Pull Request** with a clear description of the changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
