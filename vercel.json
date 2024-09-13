@@ -1,0 +1,63 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "next.config.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "pages/**/*.js",
+        "use": "@vercel/next"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/$1"
+      }
+    ],
+    "env": {
+      "BARK_COMMERCE_API_URL": "insert_url_here",
+      "BARK_COMMERCE_API_KEY": "insert_key_here",
+  
+      "SOLANA_MAINNET_RPC_URL": "insert_url_here",
+      "SOLANA_DEVNET_RPC_URL": "insert_url_here",
+
+      "SOLANA_PAY_API_URL": "insert_url_here",
+  
+      "HELIUS_MAINNET_RPC_URL": "https://mainnet.helius-rpc.com/?api-key=409916b5-96e5-4891-8aa5-747fcf8a35e5",
+      "HELIUS_DEVNET_RPC_URL": "https://devnet.helius-rpc.com/?api-key=409916b5-96e5-4891-8aa5-747fcf8a35e5",
+  
+      "MARKETPLACE_POSTGRES_URL": "postgres://postgres.xffijnbipgtwrpykfmyb:bi9akBvf2ZRvFOTo@aws-0-eu-central-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x",
+      "MARKETPLACE_POSTGRES_PRISMA_URL": "postgres://postgres.xffijnbipgtwrpykfmyb:bi9akBvf2ZRvFOTo@aws-0-eu-central-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x",
+      "MARKETPLACE_SUPABASE_URL": "https://xffijnbipgtwrpykfmyb.supabase.co",
+      "MARKETPLACE_NEXT_PUBLIC_SUPABASE_URL": "https://xffijnbipgtwrpykfmyb.supabase.co",
+      "MARKETPLACE_POSTGRES_URL_NON_POOLING": "postgres://postgres.xffijnbipgtwrpykfmyb:bi9akBvf2ZRvFOTo@aws-0-eu-central-1.pooler.supabase.com:5432/postgres?sslmode=require",
+      "MARKETPLACE_SUPABASE_JWT_SECRET": "8EPxpNKa3bY8RGssGgVyPkqwnpCajGDxvKOvK74PwrV9m3Rvakh4yZCzpKqolc6hID5S3rvv2itmTHxYhOwAjQ==",
+      "MARKETPLACE_POSTGRES_USER": "postgres",
+      "MARKETPLACE_NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhmZmlqbmJpcGd0d3JweWtmbXliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjUzNjgyNTMsImV4cCI6MjA0MDk0NDI1M30.B4czmVtlihqEDWbe4JlX2PkxsmCiXFwpKin2vWbc_ro",
+      "MARKETPLACE_POSTGRES_PASSWORD": "bi9akBvf2ZRvFOTo",
+      "MARKETPLACE_POSTGRES_DATABASE": "postgres",
+      "MARKETPLACE_SUPABASE_SERVICE_ROLE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhmZmlqbmJpcGd0d3JweWtmbXliIiwicm9zZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNTM2ODI1MywiZXhwIjoyMDQwOTQ0MjUzfQ.rvRBuo_OZPdYr_1CD8Zl1rgbhNt5ZS_H-H9HJo7ITpc",
+      "MARKETPLACE_POSTGRES_HOST": "db.xffijnbipgtwrpykfmyb.supabase.co",
+  
+      "PROXY_WALLET_SK": "insert_key_here",
+      "SERVER_WALLET_SK": "insert_key_here",
+  
+      "SHYFT_API_KEY": "https://rpc.shyft.to?api_key=c1AmdE28Ks7cwKzp",
+  
+      "GMAIL_CLIENT_ID": "insert_id_here",
+      "GMAIL_CLIENT_SECRET": "insert_secret_here",
+      "GMAIL_REDIRECT_URI": "https://developers.google.com/oauthplayground",
+      "GMAIL_REFRESH_TOKEN": "insert_refresh_here",
+      "EMAIL_USER": "insert_email_here",
+      "EMAIL_FROM": "insert_email_here"
+    },
+    "build": {
+      "env": {
+        "NEXT_PUBLIC_SOLANA_NETWORK": "mainnet",
+        "NEXT_PUBLIC_SOLANA_RPC_URL": "https://api.mainnet.solana.com"
+      }
+    }
+  }
+  

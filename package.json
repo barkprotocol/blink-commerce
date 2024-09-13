@@ -1,6 +1,6 @@
 {
   "name": "blink-commerce",
-  "description": "",
+  "description": "Solana e-commerce dapp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
