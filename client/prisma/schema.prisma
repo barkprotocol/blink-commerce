@@ -1,0 +1,32 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Store {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  storeId   String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Product {
+  id                Int      @id @default(autoincrement())
+  name              String
+  price             Float
+  description       String?
+  createdAt         DateTime @default(now())
+  images            Image[]  // Relationship to Image model
+}
+
+model Image {
+  id         Int      @id @default(autoincrement())
+  url        String   // URL to the image
+  productId  Int      // Foreign key to Product
+  product    Product  @relation(fields: [productId], references: [id])
+  createdAt  DateTime @default(now())
+}

@@ -10,6 +10,7 @@ Welcome to BARK E-commerce, your one-stop shop for all things BARK. This project
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
+- [ToDo](#todo)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -31,10 +32,10 @@ To get started with this project locally, follow these steps:
    git clone https://github.com/barkprotocol/bark-commerce.git
    ```
 
-2. **Navigate to the Project Directory**
+2. **Navigate to the Client Directory**
 
    ```bash
-   cd bark-commerce
+   cd client
    ```
 
 3. **Install Dependencies**
@@ -106,9 +107,17 @@ To get started with this project locally, follow these steps:
 - **Fonts**: Google Fonts Oswald for titles, Poppins Light for body text, and Syne fonts.
 - **Wallet Integration**: Includes Phantom, Solflare, and Backpack wallets using `@solana/wallet-adapter-react`.
 
+### Prisma Configuration
+
+1. Set the `DATABASE_URL` in the `.env` file to point to your existing database. If your database has no tables yet, read [Prisma Getting Started](https://pris.ly/d/getting-started).
+2. Set the provider of the `datasource` block in `schema.prisma` to match your database: postgresql, mysql, sqlite, sqlserver, mongodb, or cockroachdb.
+3. Run `prisma db pull` to turn your database schema into a Prisma schema.
+4. Run `prisma generate` to generate the Prisma Client. You can then start querying your database.
+5. Tip: Explore how you can extend the ORM with scalable connection pooling, global caching, and real-time database events. Read [Prisma Beyond ORM](https://pris.ly/cli/beyond-orm).
+
 ## ToDo
 
-- Solana actions and blinks
+- **Solana Actions and Blinks**: Implement and integrate Solana actions and blinks for enhanced functionality.
 
 ## Contributing
 
