@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Image from 'next/image'; // Import Image component
+import Image from 'next/image';
 import "./globals.css";
 
 // Load local fonts

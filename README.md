@@ -1,6 +1,12 @@
+Here’s an updated version of your `README.md` for BARK E-commerce:
+
+---
+
 # BARK E-commerce
 
 Welcome to BARK E-commerce, your one-stop shop for all things BARK. This project features a modern e-commerce platform built with Next.js, TypeScript, and Tailwind CSS, and leverages the Solana blockchain for a seamless shopping experience.
+
+![E-commerce frontend UI](github/assets/screenshot.png)
 
 ## Table of Contents
 
@@ -86,7 +92,7 @@ To get started with this project locally, follow these steps:
    yarn dev
    ```
 
-2. **Open your browser and navigate to `http://localhost:3000`** to see the application in action.
+2. **Open your browser and navigate to [`http://localhost:3000`](http://localhost:3000)** to see the application in action.
 
 3. **For production deployment**, ensure to set up environment variables and build the project:
 
@@ -103,6 +109,10 @@ To get started with this project locally, follow these steps:
 - **Styling**: Uses Tailwind CSS for styling. Customize the configuration in `tailwind.config.js`.
 - **Fonts**: Google Fonts Oswald for titles, Poppins Light for body text, and Syne fonts.
 - **Wallet Integration**: Includes Phantom, Solflare, and Backpack wallets using `@solana/wallet-adapter-react`.
+
+## ToDo
+
+- Solana actions and blinks
 
 ## Contributing
 
